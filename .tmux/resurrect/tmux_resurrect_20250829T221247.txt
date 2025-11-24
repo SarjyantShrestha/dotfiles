@@ -1,9 +1,0 @@
-pane	SYT	0	1	:*	0	SRJNT	:/home/rapzy	1	zsh	:
-pane	SYT	1	0	:-	0	SRJNT	:/home/rapzy	1	zsh	:
-pane	SYT	2	0	:	0	SRJNT	:/home/rapzy	1	zsh	:
-pane	SYT	3	0	:	0	SRJNT	:/home/rapzy	1	zsh	:
-window	SYT	0	:zsh	1	:*	c93e,191x47,0,0,1	:
-window	SYT	1	:FES	0	:-	cd3f,191x48,0,0,2	off
-window	SYT	2	:zsh	0	:	cd40,191x48,0,0,3	:
-window	SYT	3	:zsh	0	:	cd41,191x48,0,0,4	:
-state	SYT	

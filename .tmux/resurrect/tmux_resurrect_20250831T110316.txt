@@ -1,9 +1,0 @@
-pane	SYT	0	0	:	0	SRJNT	:/home/rapzy/Downloads/Projects/DristiSYT	1	zsh	:
-pane	SYT	1	0	:-	0	SRJNT	:/home/rapzy/Downloads/Projects/DristiSYT	1	zsh	:
-pane	SYT	2	0	:	0	SRJNT	:/home/rapzy/Downloads/Projects/DristiSYT	1	zsh	:
-pane	SYT	3	1	:*	0	SRJNT	:/home/rapzy/Downloads/Projects/DristiSYT	1	zsh	:
-window	SYT	0	:zsh	0	:	c93d,191x47,0,0,0	:
-window	SYT	1	:FES	0	:-	c93e,191x47,0,0,1	off
-window	SYT	2	:zsh	0	:	c93f,191x47,0,0,2	:
-window	SYT	3	:BES	1	:*	c940,191x47,0,0,3	off
-state	SYT	

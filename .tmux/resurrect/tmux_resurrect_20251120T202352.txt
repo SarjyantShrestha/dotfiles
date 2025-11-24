@@ -1,9 +1,0 @@
-pane	SYT	0	1	:*	0	SRJNT	:/home/rapzy/Downloads/Projects/SYT-Deployed/SYT-Frontend	1	zsh	:
-pane	SYT	1	0	:-	0	SRJNT	:/home/rapzy/Downloads/Projects/SYT-Deployed/SYT-Backend	1	zsh	:
-pane	SYT	2	0	:	0	SRJNT	:/home/rapzy/Downloads/Projects/SYT-Deployed/SYT-Frontend	1	zsh	:
-pane	SYT	3	0	:	0	SRJNT	:/home/rapzy/Downloads/Projects/SYT-Deployed/SYT-Backend	1	zsh	:
-window	SYT	0	:zsh	1	:*	b6bd,190x52,0,0,0	:
-window	SYT	1	:zsh	0	:-	b6be,190x52,0,0,1	:
-window	SYT	2	:zsh	0	:	b6bf,190x52,0,0,2	:
-window	SYT	3	:zsh	0	:	b6c0,190x52,0,0,3	:
-state	SYT	
