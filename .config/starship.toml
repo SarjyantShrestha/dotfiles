@@ -115,7 +115,8 @@ format = 'via [$symbol$stack]($style)'
 format = 'via [$symbol]($style)'
 
 [python]
-format = 'via [$symbol]($style)'
+format = 'via $symbol(${version} )(($virtualenv) )'
+pyenv_version_name = false
 
 [quarto]
 format = 'via [$symbol]($style)'
