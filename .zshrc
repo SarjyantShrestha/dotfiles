@@ -27,3 +27,11 @@ bindkey '^K' history-substring-search-up
 # Ctrl-J = search down
 bindkey '^J' history-substring-search-down
 
+
+# pnpm
+export PNPM_HOME="/home/rapzy/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
