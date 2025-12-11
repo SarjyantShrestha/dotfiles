@@ -259,7 +259,7 @@ require('lazy').setup({
     },
   },
 
-  { -- Useful plugin to show you pending keybinds.
+  {                     -- Useful plugin to show you pending keybinds.
     'folke/which-key.nvim',
     event = 'VimEnter', -- Sets the loading event to 'VimEnter'
     opts = {
@@ -302,7 +302,7 @@ require('lazy').setup({
 
       -- Document existing key chains
       spec = {
-        { '<leader>c', group = '[C]ode', mode = { 'n', 'x' } },
+        { '<leader>c', group = '[C]ode',     mode = { 'n', 'x' } },
         { '<leader>d', group = '[D]ocument' },
         { '<leader>r', group = '[R]ename' },
         { '<leader>s', group = '[S]earch' },
@@ -320,21 +320,21 @@ require('lazy').setup({
     config = function()
       require('catppuccin').setup {
         flavour = 'auto', -- latte, frappe, macchiato, mocha
-        background = { -- :h background
+        background = {    -- :h background
           light = 'latte',
           dark = 'mocha',
         },
         transparent_background = true, -- disables setting the background color.
-        show_end_of_buffer = false, -- shows the '~' characters after the end of buffers
-        term_colors = false, -- sets terminal colors (e.g. `g:terminal_color_0`)
+        show_end_of_buffer = false,    -- shows the '~' characters after the end of buffers
+        term_colors = false,           -- sets terminal colors (e.g. `g:terminal_color_0`)
         dim_inactive = {
-          enabled = false, -- dims the background color of inactive window
+          enabled = false,             -- dims the background color of inactive window
           shade = 'dark',
-          percentage = 0.15, -- percentage of the shade to apply to the inactive window
+          percentage = 0.15,           -- percentage of the shade to apply to the inactive window
         },
-        no_italic = true, -- Force no italic
-        no_bold = false, -- Force no bold
-        no_underline = false, -- Force no underline
+        no_italic = true,              -- Force no italic
+        no_bold = false,               -- Force no bold
+        no_underline = false,          -- Force no underline
         --[[ styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
           -- comments = { 'italic' }, -- Change the style of comments
           -- conditionals = { 'italic' },
@@ -373,7 +373,7 @@ require('lazy').setup({
       vim.cmd.hi 'Comment gui=none'
       vim.api.nvim_set_hl(0, 'TelescopeNormal', { bg = 'none' }) --Background (inside telescope)
       vim.api.nvim_set_hl(0, 'TelescopeBorder', { bg = 'none' }) --Weird Borderline
-      vim.api.nvim_set_hl(0, 'NormalNC', { bg = 'none' }) --Background (outside telescope)
+      vim.api.nvim_set_hl(0, 'NormalNC', { bg = 'none' })        --Background (outside telescope)
       vim.api.nvim_set_hl(0, 'WinSeparator', { fg = '#ffffff' }) --window separator
       vim.api.nvim_set_hl(0, 'NotificationInfo', { bg = 'none' })
       vim.api.nvim_set_hl(0, 'NotificationWarning', { bg = 'none' })
@@ -403,7 +403,6 @@ require('lazy').setup({
 
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
-
   require 'kickstart.plugins.autopairs',
   require 'kickstart.plugins.conform',
   require 'kickstart.plugins.dap',

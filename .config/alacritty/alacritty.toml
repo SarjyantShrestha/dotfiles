@@ -24,3 +24,7 @@ bindings = [
 { key = "Insert", mods = "Shift", action = "Paste" },
 { key = "Insert", mods = "Control", action = "Copy" }
 ]
+
+[colors.cursor]
+cursor = "#A6E3A1"
+text = '#000000'
