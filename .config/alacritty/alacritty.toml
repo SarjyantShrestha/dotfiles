@@ -4,7 +4,7 @@ general.import = [ "~/.config/omarchy/current/theme/alacritty.toml" ]
 TERM = "xterm-256color"
 
 [font]
-normal = { family = "TX-02"}
+normal = { family = "TX-02", style="medium"}
 bold = { family = "TX-02" }
 italic = { family = "TX-02" }
 size = 11
@@ -25,6 +25,32 @@ bindings = [
 { key = "Insert", mods = "Control", action = "Copy" }
 ]
 
+# Colors (Dracula)
+[colors.primary]
+background = '#262834'
+# foreground = '#f8f8f2'
+
 [colors.cursor]
-cursor = "#A6E3A1"
-text = '#000000'
+text = 'CellBackground' # Uses the background color
+cursor = "#afd7af"
+
+
+[colors.normal]
+black   = '#2e2e2e'
+red     = '#ff7f7f'
+green   = '#70d39e'
+yellow  = '#f7e79c'
+blue    = '#b3a0f7'
+magenta = '#f2a6d9'
+cyan    = '#8bd8f6'
+white   = '#dcdcdc'
+
+[colors.bright]
+black   = '#575757'
+red     = '#ff9999'
+green   = '#9ae0b7'
+yellow  = '#fff2b3'
+blue    = '#cbb3ff'
+magenta = '#f4bddf'
+cyan    = '#a3e4f9'
+white   = '#f0f0f0'
