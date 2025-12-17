@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Kill any existing slurp instance to avoid conflicts
+pkill slurp || true
+
+# Take a screenshot with freeze and region selection
+hyprshot -m ${1:-region} --freeze --raw |
+  satty --filename - \
+    --early-exit \
+    --actions-on-enter save-to-clipboard \
+    --save-after-copy \
+    --copy-command 'wl-copy'
