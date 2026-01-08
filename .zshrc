@@ -15,18 +15,14 @@ eval "$(starship init zsh)"
 # Ctrl Space to accept autosuggest
 bindkey '^ ' autosuggest-accept
 
-# Ctrl-K = history up (previous command)
-bindkey '^K' up-line-or-history
-
-# Ctrl-J = history down (next command)
-bindkey '^J' down-line-or-history
 
 # Ctrl-K = search up
-bindkey '^K' history-substring-search-up
+bindkey '^P' history-substring-search-up
 
 # Ctrl-J = search down
-bindkey '^J' history-substring-search-down
+bindkey '^N' history-substring-search-down
 
+alias cd=z
 
 # pnpm
 export PNPM_HOME="/home/arch/.local/share/pnpm"
@@ -35,3 +31,8 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+#mise
+eval "$(~/.local/bin/mise activate zsh)"
+
+eval "$(zoxide init zsh)"
