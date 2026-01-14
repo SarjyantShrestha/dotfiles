@@ -36,3 +36,6 @@ esac
 eval "$(~/.local/bin/mise activate zsh)"
 
 eval "$(zoxide init zsh)"
+
+. "$HOME/.local/share/../bin/env"
+eval "$(uv generate-shell-completion zsh)"

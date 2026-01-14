@@ -1,4 +1,12 @@
 return {
+  {
+    'lukas-reineke/indent-blankline.nvim',
+    main = 'ibl',
+    opts = {
+      indent = { char = '│' }, -- Style for the background lines
+      scope = { enabled = false }, -- Disable its internal scope so mini handles it
+    },
+  },
   { -- Collection of various small independent plugins/modules
     'echasnovski/mini.nvim',
     config = function()
@@ -24,6 +32,31 @@ return {
       -- set use_icons to true if you have a Nerd Font
       statusline.setup { use_icons = true, set_vim_settings = false }
 
+      -- local indentscope = require('mini.indentscope')
+      -- indentscope.setup({
+      --   symbol = '│',
+      --   draw = {
+      --     delay = 0,
+      --     priority = 2,
+      --     animation = indentscope.gen_animation.cubic({
+      --       duration = 100,
+      --       unit = 'total',
+      --     }),
+      --   },
+      --   mappings = {
+      --     object_scope = 'ii',
+      --     object_scope_with_border = 'ai',
+      --     goto_top = '[i',
+      --     goto_bottom = ']i',
+      --   },
+      --   options = {
+      --     border = 'both',
+      --     indent_at_cursor = true,
+      --     n_lines = 10000,
+      --     try_as_border = false,
+      --   },
+      -- })
+
       -- You can configure sections in the statusline by overriding their
       -- default behavior. For example, here we set the section for
       -- cursor location to LINE:COLUMN
@@ -47,9 +80,6 @@ return {
         -- Use custom highlight group "StatusFilename"
         return string.format('%%#StatusFilename# %s ', filename)
       end
-
-      -- ... and there is more!
-      --  Check out: https://github.com/echasnovski/mini.nvim
     end,
   },
 }

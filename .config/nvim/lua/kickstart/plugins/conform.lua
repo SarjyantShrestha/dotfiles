@@ -15,7 +15,7 @@ return {
         html = { 'prettier' },
         jsonc = { 'prettier' },
         json = { 'prettier' },
-        yaml = { 'eslint' },
+        yaml = { 'prettier' },
         markdown = { 'prettier' },
         graphql = { 'prettier' },
         liquid = { 'prettier' },

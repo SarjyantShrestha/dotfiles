@@ -35,9 +35,6 @@ end)
 
 vim.keymap.set('n', 'p', '"0p', { noremap = true, silent = true })
 vim.keymap.set('n', 'P', '"0P', { noremap = true, silent = true })
-vim.keymap.set('n', '<leader>gb', function()
-  vim.cmd 'GitBlameToggle'
-end, { desc = 'Toggle git blame' })
 
 -- Enable break indent
 vim.opt.breakindent = true
@@ -70,10 +67,10 @@ vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 vim.opt.inccommand = 'split'
 
 -- Show which line your cursor is on
--- vim.opt.cursorline = true
+vim.opt.cursorline = true
 
 --remove cursorline color, required for hl-CursorLineNr with cursorline true.
-vim.opt.cursorlineopt = { 'both' }
+vim.opt.cursorlineopt = { 'number' }
 
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
@@ -241,24 +238,6 @@ require('lazy').setup({
     end,
   },
 
-  -- Here is a more advanced example where we pass configuration
-  -- options to `gitsigns.nvim`. This is equivalent to the following lua:
-  --    require('gitsigns').setup({ ... })
-  --
-  -- See `:help gitsigns` to understand what the configuration keys do
-  { -- Adds git related signs to the gutter, as well as utilities for managing changes
-    'lewis6991/gitsigns.nvim',
-    opts = {
-      signs = {
-        add = { text = '+' },
-        change = { text = '~' },
-        delete = { text = '_' },
-        topdelete = { text = '‾' },
-        changedelete = { text = '~' },
-      },
-    },
-  },
-
   {                     -- Useful plugin to show you pending keybinds.
     'folke/which-key.nvim',
     event = 'VimEnter', -- Sets the loading event to 'VimEnter'
@@ -298,6 +277,14 @@ require('lazy').setup({
           F11 = '<F11>',
           F12 = '<F12>',
         },
+      },
+      win = {
+        no_overlap = true,
+        border = "rounded",
+        padding = { 1, 2 }, -- top/bottom, left/right
+      },
+      layout = {
+        spacing = 3, -- spacing between columns
       },
 
       -- Document existing key chains
@@ -416,14 +403,13 @@ require('lazy').setup({
   require 'kickstart.plugins.nvim-lint',
   require 'kickstart.plugins.dadbod',
   require 'kickstart.plugins.live-server',
-  require 'kickstart.plugins.git-blame',
-  require 'kickstart.plugins.indent-blankline',
+  require 'kickstart.plugins.git-signs',
+  require 'kickstart.plugins.snacks',
   --  require 'kickstart.plugins.nvim-cmp',
   -- require 'kickstart.plugins.cord',
   -- require 'kickstart.plugins.render-markdown',
   -- require 'kickstart.plugins.copilot',
   -- require 'kickstart.plugins.noice',
-  -- require 'kickstart.plugins.indent_line',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`.
   --    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`

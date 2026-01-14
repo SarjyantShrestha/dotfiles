@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Spotify icon Unicode character (Nerd Font or Font Awesome patched font)
+SPOTIFY_ICON="" # Unicode f1bc
+
+# Get current song title using playerctl
+SONG=$(playerctl --player=spotify metadata title 2>/dev/null)
+
+# Get current artist name using playerctl
+ARTIST=$(playerctl --player=spotify metadata artist 2>/dev/null)
+
+if [ -z "$SONG" ] || [ -z "$ARTIST" ]; then
+  # No output if no song playing
+  exit 0
+else
+  echo "$SONG $SPOTIFY_ICON $ARTIST"
+fi
