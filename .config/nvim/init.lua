@@ -1,5 +1,3 @@
---  NOTE: If you experience any errors while trying to install kickstart, run `:checkhealth` for more info
-
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
@@ -19,6 +17,7 @@ vim.opt.wrap = false
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.laststatus = 3
+vim.o.termguicolors = true
 -- vim.opt.winborder = 'single'
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = 'a'
@@ -35,6 +34,9 @@ end)
 
 vim.keymap.set('n', 'p', '"0p', { noremap = true, silent = true })
 vim.keymap.set('n', 'P', '"0P', { noremap = true, silent = true })
+
+-- Open terminal in horizontal split with a height of 20 lines
+vim.api.nvim_set_keymap('n', '<leader>t', ':split | terminal<CR>:resize 10<CR>', { noremap = true, silent = true })
 
 -- Enable break indent
 vim.opt.breakindent = true
@@ -73,7 +75,7 @@ vim.opt.cursorline = true
 vim.opt.cursorlineopt = { 'number' }
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.scrolloff = 10
+vim.opt.scrolloff = 5
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
@@ -392,23 +394,35 @@ require('lazy').setup({
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
   require 'kickstart.plugins.autopairs',
   require 'kickstart.plugins.conform',
-  require 'kickstart.plugins.dap',
-  require 'kickstart.plugins.debug',
   require 'kickstart.plugins.fzf-telescope',
   require 'kickstart.plugins.lsp-config',
-  require 'kickstart.plugins.mini',
   require 'kickstart.plugins.blink-cmp',
   require 'kickstart.plugins.treesitter',
-  require 'kickstart.plugins.vim-fugitive',
   require 'kickstart.plugins.nvim-lint',
+
+  -- DB
   require 'kickstart.plugins.dadbod',
+
+  -- Debugger
+  -- require 'kickstart.plugins.dap',
+  -- require 'kickstart.plugins.debug',
+
   require 'kickstart.plugins.live-server',
+  require 'kickstart.plugins.vim-fugitive',
+  require 'kickstart.plugins.mini',
   require 'kickstart.plugins.git-signs',
+  -- require 'kickstart.plugins.copilot',
+  -- Status column
   require 'kickstart.plugins.snacks',
-  --  require 'kickstart.plugins.nvim-cmp',
+  require 'kickstart.plugins.translate',
+  -- Fold
+  require 'kickstart.plugins.nvim-ufo-fold',
+
+  require 'kickstart.plugins.lazy-git',
+
+  -- require 'kickstart.plugins.nvim-cmp',
   -- require 'kickstart.plugins.cord',
   -- require 'kickstart.plugins.render-markdown',
-  -- require 'kickstart.plugins.copilot',
   -- require 'kickstart.plugins.noice',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`.

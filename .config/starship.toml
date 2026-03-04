@@ -1,5 +1,8 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
+[package]
+disabled = true
+
 [bun]
 format = "via [$symbol]($style)"
 
@@ -115,7 +118,7 @@ format = 'via [$symbol$stack]($style)'
 format = 'via [$symbol]($style)'
 
 [python]
-format = 'via $symbol(${version} )(($virtualenv) )'
+format = 'via [$symbol($virtualenv )]($style)'
 pyenv_version_name = false
 
 [quarto]

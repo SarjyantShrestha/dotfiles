@@ -8,7 +8,7 @@ return {
         panel = {
           auto_refresh = false,
           keymap = {
-            accept = '<CR>',
+            accept = '<C-y>',
             jump_prev = '[[',
             jump_next = ']]',
             refresh = 'gr',

@@ -7,7 +7,7 @@ TERM = "xterm-256color"
 normal = { family = "TX-02", style="medium"}
 bold = { family = "TX-02" }
 italic = { family = "TX-02" }
-size = 11
+size = 10.5
 
 # [colors]
 # primary.background = "#141414"
@@ -54,3 +54,6 @@ blue    = '#cbb3ff'
 magenta = '#f4bddf'
 cyan    = '#a3e4f9'
 white   = '#f0f0f0'
+
+[terminal]
+osc52 = "CopyPaste"

@@ -39,3 +39,6 @@ eval "$(zoxide init zsh)"
 
 . "$HOME/.local/share/../bin/env"
 eval "$(uv generate-shell-completion zsh)"
+
+source /usr/share/nvm/init-nvm.sh
+
