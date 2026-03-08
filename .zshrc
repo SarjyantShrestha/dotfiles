@@ -25,7 +25,7 @@ bindkey '^N' history-substring-search-down
 alias cd=z
 
 # pnpm
-export PNPM_HOME="/home/arch/.local/share/pnpm"
+export PNPM_HOME="/home/rapzy/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
